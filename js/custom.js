@@ -1,3 +1,3 @@
 $.ready(function(){
-  $('.navmenu').offcanvas();
+  /*$('.navmenu').offcanvas();*/
 });
