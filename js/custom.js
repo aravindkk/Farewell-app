@@ -3,6 +3,18 @@ $(function(){
 	$("#landing").hide();
 	$("#home").show();
 
+    $("#fs").click(function(){
+    	if(screenfull.enabled)
+    	{
+    		screenfull.request();
+    	}
+    	else
+    	{
+    		//fullscreen not enabled, sorry
+    		$("#fs").innerHTML="------";
+    	}
+    });
+
     //handle home button press
     $("#go-land").click(function(){
     	$("#home").hide();
