@@ -383,7 +383,8 @@ else window.addEventListener('load', __ldinsp, false);
             <label for="voice"><span class="glyphicon glyphicon glyphicon-record" aria-hidden="true"></span></label>
             <input type="file" id="voice" accept="audio/*;capture=microphone">
             <label for="image"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span></label>
-            <input type="file" id="image" accept="image/*;capture=camera">
+            <input type="file" id="image" accept="image/*;capture=camera" onchange="encodeImageFileasURL();">
+            <div id="imgTest"></div>
             <label for="vid"><span class="glyphicon glyphicon glyphicon-facetime-video" aria-hidden="true"></span></label>
             <input type="file" id="vid" accept="video/*;capture=camcorder">
           </div>

@@ -41,3 +41,25 @@ $(function(){
   	setTimeout(function(){$("#myModal").modal('show');},1000);
   });
 });
+
+function encodeImageFileasURL()
+{
+	var filesSelected = document.getElementById("image").files;
+	console.log('here');
+	if(filesSelected.length > 0)
+	{
+		var fileToLoad = filesSelected[0];
+		var fileReader = new FileReader();
+
+		fileReader.onload = function(fileLoadedEvent)
+		{
+			//get base64 encoded string
+			var srcData = fileLoadedEvent.target.result;
+
+			var newImage = document.createElement('img');
+			newImage.src = srcData;
+			document.getElementById("imgTest").innerHTML = newImage.outerHTML;
+		}
+		fileReader.readAsDataURL(fileToLoad);
+	}
+}
