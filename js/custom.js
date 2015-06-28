@@ -1,4 +1,14 @@
 $(function(){
+	//init 
+	$("#landing").hide();
+	$("#home").show();
+
+    //handle home button press
+    $("#go-land").click(function(){
+    	$("#home").hide();
+    	$("#landing").show();
+    });
+
     $("#nav-label1").click(function(){
   	$("#li-2").removeClass("active");
   	$("#li-3").removeClass("active");
@@ -13,7 +23,6 @@ $(function(){
   	$("#li-4").removeClass("active");
   	$("#li-2").addClass("active");
   	$("#nmenu").offcanvas('hide');
-  	setTimeout(function(){$("#myModal").modal('show');},1000);
   });	
   $("#nav-label3").click(function(){
   	$("#li-1").removeClass("active");
