@@ -78,7 +78,7 @@ else window.addEventListener('load', __ldinsp, false);
         font-family: MyHelvetica, sans-serif;
         margin-bottom: 40px;
         margin-top: 25px;
-        color: orange;
+        color: #3b5998 ;
       }
       /*.carousel
       {
@@ -203,6 +203,37 @@ else window.addEventListener('load', __ldinsp, false);
       {
         max-width:70vw;
       }
+      #home
+      {
+        background-image: url("lined_paper.png");
+        background-repeat: repeat;
+        width:100vw;
+        height:100vh; 
+        font-size:large;
+      }
+      #summary
+      {
+        font-family:'Josefin Sans', sans-serif;
+        /*text-shadow: 0 1px 2px rgba(0, 0, 0, .5);*/
+        margin-top : 10vh;
+        color: black;
+        font-weight: bolder;
+      }
+      #go-land
+      {
+        width:100%;
+        margin-top:15vh;
+      }
+      #go-about
+      {
+        width: 100%;
+        margin-top: 5vh;
+      }
+      #go-out
+      {
+        width: 100%;
+        margin-top: 5vh;
+      }
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -214,9 +245,11 @@ else window.addEventListener('load', __ldinsp, false);
   </head>
   <body>
      <div id="home">
-        <h1>Inventory Superstar</h1>
-        <p>Share memories with Arun</p>
-        <button class="btn btn-primary btn-lg" id="go-land">Enter</button>
+        <h1 class="text-center">Inventory Superstar</h1>
+        <p class="text-center" id="summary">Share your memories of Arun</p>
+        <button class="btn btn-success btn-lg" id="go-land">Enter</button>
+        <button class="btn btn-warning btn-lg" id="go-about">About</button>
+        <button class="btn btn-danger btn-lg" id="go-out">Quit</button>
      </div>
      <div id="landing">
      <div class="navmenu navmenu-default navmenu-fixed-left offcanvas" id="nmenu">
