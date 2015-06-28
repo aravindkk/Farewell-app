@@ -7,8 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Memories with Arun</title>
 
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Muli:400,300italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap-social.css">
 
@@ -49,6 +49,18 @@
   font-family: MyHelvetica;
   src: url(Bleeding.ttf);
   font-weight: bold;
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(http://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Roboto Light Italic'), local('Roboto-LightItalic'), url(http://fonts.gstatic.com/s/roboto/v15/7m8l7TlFO-S3VkhHuR0at44P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
 }
       h1
       {
@@ -112,17 +124,75 @@
         background-image: url("binding_dark.png");
         background-repeat: repeat;
       }
-      .navmenu
+      .navmenu-nav>li>a
       {
         /*background-image: url("binding_dark.png");
         background-repeat: repeat;
         opacity: 60%;*/ 
+        font-size: large;
+        color: orange;
+      }
+      a
+      {
+        color: orange;
       }
       .navmenu-brand
       {
         font-family: MyHelvetica, sans-serif;
         font-size: large;
       }
+      .ara-caption
+      {
+         right: 15%;
+         left: 15%;
+         z-index: 10;
+         padding-top: 20px;
+         padding-bottom: 20px;
+         color: #fff;
+         text-align: center;
+         text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+         font-size:large;
+      }
+      .ara-quote
+      {
+         color: orange;
+         font-family: 'Josefin Sans', sans-serif;
+         text-shadow: 0 1px 2px rgba(0, 0, 0, .9);
+         font-size: large;
+      }
+      .ara-more
+      {
+        color: white;
+      }
+      .orange
+      {
+        color: orange;
+      }
+      #nav-title
+      {
+        color: black;
+      }
+      #nav-label1
+      {
+       color:#008744;
+      }
+      #nav-label2
+      {
+       color:#0057e7;
+      }
+      #nav-label3
+      {
+       color:#d62d20;
+      }
+      #nav-label4
+      {
+       color:#ffa700;
+      }
+      #nmenu
+      {
+        max-width:60vw;
+      }
+
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -133,17 +203,17 @@
     <![endif]-->
   </head>
   <body>
-     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
-      <a class="navmenu-brand" href="#">Inventory Superstar</a>
+     <div class="navmenu navmenu-default navmenu-fixed-left offcanvas" id="nmenu">
+      <a class="navmenu-brand" href="#" id="nav-title">Inventory Superstar</a>
       <hr>
       <ul class="nav navmenu-nav">
-        <li><a href="../navmenu/">Home</a></li>
+        <li><a href="../navmenu/" id="nav-label1">Home</a></li>
         <li class="nav-divider"></li>
-        <li class="active"><a href="./">Memories</a></li>
+        <li class="active"><a href="./" id="nav-label2">Memories</a></li>
         <li class="nav-divider"></li>
-        <li><a href="../navmenu-reveal/">Add yours</a></li>
+        <li><a href="../navmenu-reveal/" id="nav-label3">Add yours</a></li>
         <li class="nav-divider"></li>
-        <li><a href="../navbar-offcanvas/">About</a></li>
+        <li><a href="../navbar-offcanvas/" id="nav-label4">About</a></li>
         <li class="nav-divider"></li>
       </ul>
     </div>
@@ -171,8 +241,8 @@
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src="assets/hp.jpg" alt="harry" class="img-circle">
+      <p class="text-center ara-caption">Arun Kumar Gembali</p>
       <div class="carousel-caption">
-        Arun Kumar Gembali
         <div>
         <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
@@ -183,8 +253,8 @@
     </div>
     <div class="item">
       <img src="assets/ron.jpg" alt="ron" class="img-circle">
+      <p class="text-center ara-caption">Ramesh Katoori</p>
       <div class="carousel-caption">
-        Ramesh Katoori
         <div>
         <!-- Button trigger modal -->
 <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
@@ -195,8 +265,10 @@
     </div>
     <div class="item">
       <img src="assets/her.jpg" alt="her" class="img-circle">
+      <p class="text-center ara-caption">Sulekha Metta</p>
+      <!--p class="text-center ara-quote">"Arun is kind and helping. Always."</p>
+      <p class="text-center ara-more">Read More...</p-->
       <div class="carousel-caption">
-        Sulekha Metta
         <div>
         <!-- Button trigger modal -->
 <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#myLoginModal">
@@ -207,8 +279,8 @@
     </div>
     <div class="item">
       <img src="assets/nev.jpg" alt="nev" class="img-circle">
+      <p class="text-center ara-caption">Shiva Kiran</p>
       <div class="carousel-caption">
-        Shiva Kiran
         <div>
         <!-- Button trigger modal -->
 <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal">
