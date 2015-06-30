@@ -13,6 +13,6 @@ Then to install all the dependencies of NodeJS, run:
 
 Run the app:
 
-node app.js
+>node app.js
 
 Head to localhost:5000 and check it out on mobile.
